@@ -1,0 +1,199 @@
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(246, 246, 246);
+}
+
+.encabezado{
+    grid-area: header;
+    background-color: rgb(0, 117, 171);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 22px;
+    padding: 15px;
+}
+
+.btn-menu{
+    font-size: 24px;
+}
+
+.título-de-búsqueda{
+text-align: center;
+}
+
+.filtro{
+    grid-area: filtro;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    row-gap: 5px;
+    background-color: rgb(226, 226, 226);
+}
+
+.selector{
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.box-main{
+    grid-area: box-main;
+}
+
+main{
+    grid-area: main;
+    background-color: rgb(246, 246, 246);
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.caja-producto{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(253, 253, 253);
+    width: auto;
+    height: auto;
+    row-gap: 15px;
+}
+
+.producto-img{
+    display: flex;
+    justify-content: center;
+}
+
+.producto-img img{
+    width: 70%;
+}
+
+.prod-título{
+    display: flex;
+    font-weight: 700;
+    font-size: 22;
+    justify-content: center;
+    color: rgb(73, 73, 73);
+}
+
+.precio{
+    display: flex;
+    font-size: 20px;
+    color: rgb(0,117,171);
+    justify-content: center;
+}
+
+.btn-comprar{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.btn-comprar button{
+    display: flex;
+    background-color: rgb(0,117,171);
+    color: white;
+    width:fit-content;
+    justify-content: center;
+    border-width: 0;
+    padding: 10px;
+    font-size: 16px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.grid-product{
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto;
+    width: auto;
+    gap:15px;
+}
+
+.añadir{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-añadir{
+    gap: 10px;
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgb(2, 62, 90);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+}
+
+footer .footer-text{
+    padding-top: 10px;
+    font-size: 24;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.grid-container{
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+    "header"
+    "box-main"
+    "footer";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+.m-principal{
+    display: none;
+}
+
+/*Versión de escritorio*/
+
+@media(width > 576px){
+.grid-container{
+grid-template-areas:
+"header box-main"
+"footer box-main";
+grid-template-columns: 300px 1fr;
+grid-template-rows: auto auto;
+}
+.grid-product{
+    grid-template-columns: auto auto auto auto;
+}
+
+.btn-menu{
+    visibility: hidden;
+}
+
+.encabezado{
+    display: none;
+}
+
+.m-principal{
+    height:85vh;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 117, 171);
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    row-gap: 10px;
+}
+
+.m-principal .logo{
+    padding-bottom: 12px;
+    font-size: 22px;
+}
+
+footer{
+    height: 10vh;
+}
+}
